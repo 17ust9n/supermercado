@@ -1,0 +1,28 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+
+# Environments
+venv/
+ENV/
+env/
+
+# VSCode settings
+.vscode/
+
+# macOS
+.DS_Store
+
+# PyCharm
+.idea/
+
+# Static files
+/staticfiles/
+
+# Otros archivos que no quieres subir (añade lo que necesites)

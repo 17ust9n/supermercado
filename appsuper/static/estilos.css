@@ -1,0 +1,1047 @@
+/* ==================== ESTILOS DE LA NAVBAR ==================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* ==================== LOGIN Y REGISTRO ==================== */
+
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  padding: 20px;
+}
+
+.login-card {
+  background-color: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  max-width: 450px;
+  width: 100%;
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.login-header h1 {
+  color: #007bff;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.login-header p {
+  color: #666;
+  font-size: 14px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  position: relative; /* Necesario para posicionar el ojo */
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #333;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+/* Espacio extra a la derecha para que el texto no tape el ojo */
+.form-group input[type="password"],
+.form-group input.password-toggle-active {
+  padding-right: 45px;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+.form-group input.error {
+  border-color: #dc3545;
+}
+
+/* Estilos para el botón del ojo */
+.password-toggle-btn {
+  position: absolute;
+  right: 15px;
+  top: 38px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 0;
+  color: #666;
+  user-select: none;
+}
+
+.error-message {
+  color: #dc3545;
+  font-size: 13px;
+  margin-top: 5px;
+  display: block;
+}
+
+.btn-login {
+  width: 100%;
+  padding: 14px;
+  background-color: #90EE90; /* Verde claro */
+  color: #333;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-login:hover {
+  background-color: #228B22; /* Verde oscuro */
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(34, 139, 34, 0.4);
+}
+
+.btn-login:active {
+  transform: translateY(0);
+}
+
+.btn-icon {
+  font-size: 18px;
+}
+
+.divider {
+  text-align: center;
+  margin: 25px 0;
+  position: relative;
+}
+
+.divider::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: #e0e0e0;
+}
+
+.divider span {
+  background-color: white;
+  padding: 0 15px;
+  color: #999;
+  font-size: 14px;
+  position: relative;
+}
+
+.register-link {
+  text-align: center;
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+.register-link p {
+  margin: 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.register-link a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.register-link a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+.alert {
+  padding: 12px 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.alert-error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+@media (max-width: 768px) {
+  .login-card {
+    padding: 30px 20px;
+  }
+
+  .login-header h1 {
+    font-size: 24px;
+  }
+}
+
+/* --- Nuevos estilos exclusivos de la pantalla de Registro --- */
+
+.help-text {
+  color: #666;
+  font-size: 12px;
+  margin-top: 5px;
+  display: block;
+  line-height: 1.4;
+}
+
+.btn-register {
+  width: 100%;
+  padding: 14px;
+  background-color: #90EE90; /* Verde claro */
+  color: #333;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-register:hover {
+  background-color: #228B22; /* Verde oscuro */
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(34, 139, 34, 0.4);
+}
+
+.btn-register:active {
+  transform: translateY(0);
+}
+
+.login-link {
+  text-align: center;
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+.login-link p {
+  margin: 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.login-link a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.login-link a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+/* --- Estilos globales de la estructura base (Navbar y Footer) --- */
+
+.nav-item .user-info {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background-color: #90EE90; /* Verde claro */
+  border-radius: 5px;
+  padding: 8px 12px;
+  transition: background-color 0.3s ease;
+  cursor: default;
+}
+
+.nav-item .user-info:hover {
+  background-color: #228B22 !important; /* Verde oscuro */
+}
+
+.nav-item .user-info .link-icon,
+.nav-item .user-info span {
+  transition: color 0.3s ease;
+  color: inherit;
+}
+
+.nav-item .user-info:hover .link-icon,
+.nav-item .user-info:hover span {
+  color: white !important; 
+}
+
+/* Estilo específico para el botón de cerrar sesión */
+.navbar .nav-container .nav-menu .nav-item .logout-button::before {
+  background: #DC143C !important; 
+}
+
+.navbar .nav-container .nav-menu .nav-item .logout-button:hover {
+  background-color: #DC143C !important; 
+  box-shadow: 0 4px 12px rgba(220, 20, 60, 0.4) !important; 
+}
+
+/* Footer simple */
+.site-footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-top: 1px solid #ddd;
+}
+
+
+
+
+
+/* ==================== FONDO MEJORADO ==================== */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  /* Fondo con gradiente y textura ligera */
+  background: linear-gradient(to bottom right, #87CEEB, #f0f8ff);
+  background-attachment: fixed; /* efecto parallax */
+  position: relative;
+}
+
+/* Imagen inferior izquierda */
+body::before {
+    content: "";
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 380px;       
+    height: 380px;
+    background-image: url("/media/fondo/Shampoo.jpg?v=2"); /* <-- Se agregó ?v=2 */
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.18;      
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Imagen superior derecha (ahora bajada 50px) */
+body::after {
+    content: "";
+    position: fixed;
+    top: 100px;          
+    right: 0;
+    width: 380px;
+    height: 380px;
+    background-image: url("/media/fondo/Shampoo.jpg?v=2"); /* <-- Se agregó ?v=2 */
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.18;
+    pointer-events: none;
+    z-index: -1;
+}
+
+
+/* Navbar */
+.navbar {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 3px solid #007bff;
+  margin-bottom: 20px;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: #2d3748;
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.nav-brand:hover {
+  transform: scale(1.05);
+}
+
+.nav-icon {
+  font-size: 2rem;
+  animation: rotate 3s linear infinite;
+}
+
+@keyframes rotate {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(15deg); }
+}
+
+.nav-title {
+  color: #007bff;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 0.5rem;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #4a5568;
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: #007bff;
+  transition: left 0.3s ease;
+  z-index: -1;
+}
+
+.nav-link:hover::before {
+  left: 0;
+}
+
+.nav-link:hover {
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.4);
+}
+
+.link-icon {
+  font-size: 1.2rem;
+}
+
+/* ==================== TUS ESTILOS ORIGINALES (Actualizados) ==================== */
+
+/* Contenedor principal */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+main {
+  text-align: center;
+  max-width: 700px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 90px;
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+  background-color: white !important;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+}
+
+.titulo {
+  margin: 0;
+  text-align: center;
+  font-size: 32px;
+  color: #333;
+}
+
+.lista-detalles {
+  text-align: left;
+  display: inline-block;
+  margin-top: 15px;
+}
+
+.lista-detalles p {
+  margin: 5px 0;
+}
+
+/* Contenedor de botones centrados */
+.botonera {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+/* Estilo individual de cada botón */
+.boton {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+  cursor: pointer;
+  border: none;
+}
+
+.boton:hover {
+  background-color: #0056b3;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 123, 255, 0.5);
+}
+
+/* Contenedor que agrupa todos los recuadros */
+.contenedor-equipos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+/* Tarjeta de cada equipo */
+.recuadro-equipo {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  width: 200px;
+  padding: 15px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.recuadro-equipo:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+/* Recuadro para la descripción del inicio */
+.recuadro-info {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 700px;
+  margin: 0 auto 30px auto; /* Centrado y con margen inferior */
+  text-align: left;
+}
+
+
+.foto-personal {
+  width: 100px;       /* antes 150px */
+  height: 100px;      /* antes 150px */
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  border: 3px solid #007bff;
+}
+
+.nombre-recuadro {
+  background-color: white;
+  padding: 4px 8px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border: 1px solid #ccc;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.about-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  margin: 0 auto; /* Centra todo el contenedor */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra contenido interno */
+  text-align: center; /* Centra texto */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-image {
+  width: 150px; /* Ajustá este valor si querés que sea más grande o chica */
+  height: auto;
+  border-radius: 50%; /* Hace la imagen redonda */
+  margin-bottom: 20px;
+}
+
+.about-text {
+  max-width: 600px;
+}
+
+
+/* Nombre del equipo como link */
+.nombre-equipo {
+  font-weight: bold;
+  font-size: 16px;
+  color: #333;
+  text-decoration: none;
+}
+
+.nombre-equipo:hover {
+  color: #0055aa;
+}
+
+/* Escudo pequeño, alineado con la letra */
+.escudo-mini {
+  width: 2em;
+  height: 2em;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  background-color: #f8f8f8;
+  border-radius: 4px;
+  vertical-align: middle;
+}
+
+.foto-estadio {
+  margin: 20px 0;
+}
+
+.foto-estadio img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+/* ==================== ESTILOS DEL MODAL PARA VER IMAGEN ==================== */
+
+/* Botón para ver imagen */
+.boton-ver-imagen {
+  margin-top: 15px;
+  background-color: #28a745;
+}
+
+.boton-ver-imagen:hover {
+  background-color: #218838;
+}
+
+/* Modal para imagen en grande */
+.modal-imagen {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.modal-contenido {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  animation: zoom 0.3s;
+  border-radius: 8px;
+}
+
+@keyframes zoom {
+  from {transform: scale(0.5)}
+  to {transform: scale(1)}
+}
+
+.cerrar-modal {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  color: #f1f1f1;
+  font-size: 50px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.cerrar-modal:hover,
+.cerrar-modal:focus {
+  color: #bbb;
+}
+
+/* Mejora para el contenedor del mapa */
+.map-container {
+  margin: 20px 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 400px;
+  border: none;
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+  .nav-menu {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .nav-link {
+    justify-content: center;
+  }
+  
+  .titulo {
+    font-size: 24px;
+  }
+  
+  .botonera {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  header {
+    width: 90%;
+  }
+
+  .cerrar-modal {
+    top: 10px;
+    right: 20px;
+    font-size: 40px;
+  }
+}
+
+/* Recuadro del resultado del partido */
+.recuadro-resultado {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    width: 100%;               /* Ocupa todo el ancho disponible */
+    max-width: 900px;          /* Ajustable según pantalla */
+    padding: 15px;
+    display: flex;
+    flex-direction: column;    /* Para que resultado y botón estén apilados */
+    align-items: center;
+    text-align: center;
+    white-space: nowrap;       /* ❗ Evita que el marcador haga salto de línea */
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+/* Marcador en una sola línea */
+.recuadro-resultado p.marcador {
+    font-size: 16px;           /* Ajustable */
+    margin: 0;
+}
+
+/* Texto del resultado (GANASTE! / EMPATE / GANA PC) */
+.recuadro-resultado p.resultado {
+    margin-top: 10px;
+    font-size: 16px;           /* Ajustable */
+}
+
+/* Botón de reiniciar */
+.recuadro-resultado form {
+    margin-top: 10px;
+}
+
+.boton-personalizado {
+  display: inline-block;
+  width: 300px;          /* ancho fijo */
+  height: 45px;          /* altura fija */
+  padding: 0;            /* quitamos padding extra para altura exacta */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 16px;       /* ajusta si hace falta */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 12px;      /* espacio uniforme entre botones */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  text-align: center;
+  line-height: 45px;     /* centra el texto verticalmente */
+}
+
+
+
+/* Colores específicos */
+.boton-naranja { background-color: #ff8c00; }
+.boton-rojo    { background-color: #dc3545; }
+.boton-verde   { background-color: #28a745; }
+.boton-azul    { background-color: #007bff; }
+
+/* Hover general */
+.boton-personalizado:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.btn-eliminar {
+    background-color: #dc3545;   /* 🔴 Rojo */
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.btn-eliminar:hover {
+    background-color: #b02a37;   /* 🔴 Rojo más oscuro */
+    transform: scale(1.05);
+}
+
+/* Contenedor para poner los campos en la misma fila */
+.form-row {
+    display: flex;
+    gap: 20px;             /* espacio entre campos */
+    flex-wrap: wrap;        /* responsive en pantallas pequeñas */
+}
+
+/* Cada grupo de label + campo en fila */
+.form-group-inline {
+    display: flex;
+    align-items: center;    /* etiqueta y campo centrados verticalmente */
+    gap: 8px;               /* espacio entre label y campo */
+}
+
+.form-group-inline select {
+    width: 160px; /* un poquito más ancho */
+    padding: 5px 8px;
+}
+
+.form-group-inline input[type="number"] {
+    width: 120px; /* ancho del campo de goles */
+    padding: 5px 8px;
+}
+
+
+/* --- Inicio.html --- */
+
+
+.hero-section {
+    background: linear-gradient(135deg, #1e7e34 0%, #28a745 100%);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+    border-radius: 16px;
+    margin-bottom: 40px;
+    box-shadow: 0 6px 15px rgba(40, 167, 69, 0.2);
+  }
+
+  .hero-section h1 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+  }
+
+  .hero-section p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto 25px auto;
+  }
+
+  .btn-principal {
+    display: inline-block;
+    background-color: #ffffff;
+    color: #1e7e34;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  }
+
+  .btn-principal:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    color: #155724;
+  }
+
+  /* --- Sección de Características / Beneficios --- */
+  .seccion-titulo {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 30px;
+    font-weight: 600;
+  }
+
+  .grilla-beneficios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+
+  .tarjeta-beneficio {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    border: 1px solid #f0f0f0;
+    transition: transform 0.3s ease;
+  }
+
+  .tarjeta-beneficio:hover {
+    transform: translateY(-5px);
+  }
+
+  .beneficio-icono {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    display: inline-block;
+  }
+
+  .tarjeta-beneficio h3 {
+    font-size: 1.3rem;
+    color: #222;
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+
+  .tarjeta-beneficio p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+/* --- Acerca.html --- */
+
+.titulo {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.authors {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  width: 100%;
+}
+
+/* Contenedor horizontal imagen + texto */
+.author {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  width: 80%;
+  gap: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Imagenes redondas y pequeñas */
+.author-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;  /* Redondas */
+}
+
+/* Texto */
+.author-info {
+  flex: 1;
+}
+
+.author-info h2 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.author-info p {
+  color: #555;
+}
+
+/* Modo responsivo */
+@media (max-width: 768px) {
+  .author {
+    flex-direction: column;
+    text-align: center;
+  }
+}
